@@ -1,0 +1,28 @@
+@mixin figure($width, $height, $bg-color, $text-color, $marg, $font-size) {
+  width: $width;
+  height: $height;
+  background-color: $bg-color;
+  color: $text-color;
+  margin: $marg;
+  font-size: $font-size;
+}
+@mixin flex($direction, $justify-content, $align-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin input_text($height, $color, $border, $radius) {
+  height: $height;
+  background-color: $color;
+  border: $border solid #e5e8eb;
+  border-radius: $radius;
+}
+@mixin position($position, $top, $right, $bottom, $left, $z-index) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  z-index: $z-index;
+}

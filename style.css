@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+legend {
+  width: 100vw;
+  height: 100px;
+  background-color: #663399;
+  color: #feffff;
+  margin: 0px;
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+input[type=text] {
+  height: 33.3333333333px;
+  background-color: #f9fafb;
+  border: 1px solid #e5e8eb;
+  border-radius: 5px;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+[name=activite] + label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid gray;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+[name=sport] + label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+[type=radio]:checked + label::before {
+  background-color: #663399;
+}
+
+input[type=radio] + label {
+  color: #1d1826;
+  font-weight: 600;
+}
+
+.container {
+  width: auto;
+  height: 300px;
+  background-color: auto;
+  color: auto;
+  margin: 15px;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+}
+
+@media screen and (max-width: 720px) {
+  legend {
+    font-size: 5vw;
+  }
+}
+@media screen and (max-width: 400px) {
+  legend {
+    height: auto;
+    padding: 15px;
+  }
+  input {
+    width: 100%;
+  }
+  .container {
+    width: auto;
+    height: 500px;
+    background-color: auto;
+    color: auto;
+    margin: 15px;
+    font-size: 1rem;
+  }
+  .container-nom {
+    width: 200px;
+    height: 60px;
+    background-color: auto;
+    color: auto;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .container-ville_origine {
+    width: 200px;
+    height: 60px;
+    background-color: auto;
+    color: auto;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .container-sport {
+    width: auto;
+    height: 100px;
+    background-color: auto;
+    color: auto;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .container-activite {
+    width: auto;
+    height: 120px;
+    background-color: auto;
+    color: auto;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+  .container-couleur_equipe {
+    width: auto;
+    height: 45px;
+    background-color: auto;
+    color: auto;
+    margin: 0px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

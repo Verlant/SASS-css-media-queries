@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" media="screen" href="style.css" />
+    <title>Colonie de vacances</title>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <legend>Questionnaire de colonie de vacance</legend>
+        <div class="container">
+          <div class="container-nom">
+            <label for="nom">Votre nom</label>
+            <input type="text" id="nom" name="nom" />
+          </div>
+          <div class="container-ville_origine">
+            <label for="ville_origine"> Votre ville d'origine </label>
+            <input type="text" id="ville_origine" name="ville_origine" />
+          </div>
+          <div class="container-sport">
+            <span>Choisir un sport :</span>
+            <input type="radio" id="basket" name="sport" />
+            <label for="basket">Basket</label>
+            <input type="radio" id="rugby" name="sport" />
+            <label for="rugby">Rugby</label>
+            <input type="radio" id="volley" name="sport" />
+            <label for="volley">Volley</label>
+          </div>
+          <div class="container-activite">
+            <span>Choisir une activité :</span>
+            <input type="radio" id="cinema" name="activite" />
+            <label for="cinema">Cinéma</label>
+            <input type="radio" id="peche" name="activite" />
+            <label for="peche">Pêche</label>
+            <input type="radio" id="maquette" name="activite" />
+            <label for="maquette">Maquette</label>
+            <input type="radio" id="theatre" name="activite" />
+            <label for="theatre">Théatre</label>
+          </div>
+          <div class="container-couleur_equipe">
+            <label for="couleur_equipe"> Couleur d'équipe </label>
+            <select name="activite" id="activite">
+              <option value="">--Veuillez choisir une option--</option>
+              <option value="Orange">Orange</option>
+              <option value="Bleu">Bleu</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

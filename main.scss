@@ -1,0 +1,154 @@
+@use "var";
+@use "mixin";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  font-family: Arial, Helvetica, sans-serif;
+}
+form {
+  width: 100vw;
+  // height: 100vh;
+  @include mixin.flex(column, center, center);
+}
+legend {
+  @include mixin.figure(
+    100vw,
+    var.$height,
+    var.$primary_color,
+    var.$text_color,
+    var.$marg * 0,
+    var.$font_size * 2.5
+  );
+  @include mixin.flex(row, center, center);
+  font-weight: bold;
+}
+input[type="text"] {
+  @include mixin.input_text(
+    calc(var.$height / 3),
+    var.$secondary_color,
+    var.$border,
+    var.$radius
+  );
+}
+input[type="radio"] {
+  display: none;
+}
+[name="activite"] + label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid gray;
+  border-radius: 2px;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+[name="sport"] + label::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 2px solid gray;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 0.5em;
+}
+[type="radio"]:checked + label::before {
+  background-color: var.$primary_color;
+}
+input[type="radio"] + label {
+  color: var.$text_color_checkbox;
+  font-weight: 600;
+}
+.container {
+  @include mixin.figure(
+    auto,
+    var.$height * 3,
+    auto,
+    auto,
+    var.$marg,
+    var.$font_size
+  );
+  @include mixin.flex(column, space-between, start);
+}
+@media screen and (max-width: 720px) {
+  legend {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  legend {
+    height: auto;
+    padding: 15px;
+  }
+  input {
+    width: 100%;
+  }
+  .container {
+    @include mixin.figure(
+      auto,
+      var.$height * 5,
+      auto,
+      auto,
+      var.$marg,
+      var.$font_size
+    );
+    &-nom {
+      @include mixin.figure(
+        var.$width * 2,
+        var.$height * 0.6,
+        auto,
+        auto,
+        var.$marg * 0,
+        var.$font_size
+      );
+      @include mixin.flex(column, space-between, start);
+    }
+    &-ville_origine {
+      @include mixin.figure(
+        var.$width * 2,
+        var.$height * 0.6,
+        auto,
+        auto,
+        var.$marg * 0,
+        var.$font_size
+      );
+      @include mixin.flex(column, space-between, start);
+    }
+    &-sport {
+      @include mixin.figure(
+        auto,
+        var.$height,
+        auto,
+        auto,
+        var.$marg * 0,
+        var.$font_size
+      );
+      @include mixin.flex(column, space-between, start);
+    }
+    &-activite {
+      @include mixin.figure(
+        auto,
+        var.$height * 1.2,
+        auto,
+        auto,
+        var.$marg * 0,
+        var.$font_size
+      );
+      @include mixin.flex(column, space-between, start);
+    }
+    &-couleur_equipe {
+      @include mixin.figure(
+        auto,
+        var.$height * 0.45,
+        auto,
+        auto,
+        var.$marg * 0,
+        var.$font_size
+      );
+      @include mixin.flex(column, space-between, start);
+    }
+  }
+}
